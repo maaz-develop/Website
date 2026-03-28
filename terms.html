@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Service — Cloudysol</title>
+<link rel="icon" type="image/png" href="favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;0,9..144,900&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#F0F4FA;--bg2:#E4EAF4;--bg3:#D8E2F0;--accent:#0080AA;--accent2:#5B3FD4;--text:#0F172A;--muted:#4A5578;--border:rgba(0,0,0,0.08);--card:rgba(0,0,0,0.04);--white:#ffffff;--nav-h:72px;}
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--bg);color:var(--text);font-family:'Manrope',sans-serif;font-size:16px;line-height:1.6;overflow-x:hidden;}
+  body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;z-index:1000;opacity:0.4;}
+
+  nav{position:fixed;top:0;left:0;right:0;z-index:900;display:flex;align-items:center;justify-content:space-between;padding:0 5%;height:var(--nav-h);background:rgba(240,244,250,0.92);backdrop-filter:blur(18px);border-bottom:1px solid var(--border);transition:box-shadow 0.3s;}
+  .logo{font-family:'Fraunces',serif;font-weight:800;font-size:1.5rem;letter-spacing:-0.5px;color:var(--text);text-decoration:none;display:flex;align-items:center;gap:0.5rem;}
+  .logo img{width:28px;height:28px;border-radius:6px;object-fit:contain;}
+  .logo span{color:var(--accent);}
+  .nav-links{display:flex;align-items:center;gap:2rem;list-style:none;}
+  .nav-links a{text-decoration:none;color:var(--muted);font-size:0.9rem;font-weight:400;transition:color 0.2s;}
+  .nav-links a:hover{color:var(--text);}
+  .nav-cta{display:flex;align-items:center;gap:0.75rem;}
+  .btn-demo{padding:0.55rem 1.35rem;background:var(--accent);color:#fff;border:none;border-radius:8px;font-family:'Manrope',sans-serif;font-size:0.875rem;font-weight:600;cursor:pointer;transition:all 0.25s;text-decoration:none;display:inline-flex;align-items:center;gap:0.4rem;box-shadow:0 2px 16px rgba(0,128,170,0.3);}
+  .btn-demo:hover{background:#006d92;transform:translateY(-1px);}
+  .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;z-index:1001;}
+  .hamburger span{display:block;width:24px;height:2px;background:var(--text);border-radius:2px;transition:all 0.3s;}
+  .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+  .hamburger.open span:nth-child(2){opacity:0;}
+  .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+  .mobile-menu{display:none;position:fixed;inset:0;top:var(--nav-h);background:rgba(240,244,250,0.98);backdrop-filter:blur(20px);z-index:800;flex-direction:column;align-items:center;justify-content:center;gap:2rem;}
+  .mobile-menu.open{display:flex;}
+  .mobile-menu a{text-decoration:none;color:var(--text);font-size:1.5rem;font-family:'Fraunces',serif;font-weight:700;transition:color 0.2s;}
+  .mobile-menu a:hover{color:var(--accent);}
+  .mobile-cta{display:flex;flex-direction:column;align-items:center;gap:1rem;margin-top:1rem;width:80%;max-width:280px;}
+  .btn-primary-full{width:100%;text-align:center;padding:0.85rem 2rem;background:var(--accent);color:#fff;border-radius:10px;text-decoration:none;font-family:'Manrope',sans-serif;font-weight:600;font-size:1rem;}
+
+  .legal-hero{padding:calc(var(--nav-h) + 60px) 5% 50px;position:relative;overflow:hidden;}
+  .legal-hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 80% 60% at 50% 0%,black 10%,transparent 100%);pointer-events:none;}
+  .hero-inner{max-width:800px;margin:0 auto;position:relative;}
+  .legal-badge{display:inline-flex;align-items:center;gap:0.5rem;padding:0.35rem 0.9rem;border:1px solid rgba(91,63,212,0.25);border-radius:100px;font-size:0.75rem;color:var(--accent2);letter-spacing:0.06em;text-transform:uppercase;font-weight:600;margin-bottom:1.25rem;background:rgba(91,63,212,0.05);}
+  .legal-hero h1{font-family:'Fraunces',serif;font-weight:800;font-size:clamp(2rem,4vw,3.5rem);letter-spacing:-1.5px;line-height:1.1;margin-bottom:1rem;}
+  .legal-hero p{color:var(--muted);font-size:0.95rem;font-weight:300;line-height:1.75;}
+  .legal-meta{display:flex;gap:2rem;margin-top:1.5rem;flex-wrap:wrap;}
+  .meta-item{display:flex;align-items:center;gap:0.5rem;font-size:0.8rem;color:var(--muted);}
+  .meta-item strong{color:var(--text);font-weight:600;}
+
+  .legal-layout{max-width:1000px;margin:0 auto;padding:0 5% 80px;display:grid;grid-template-columns:220px 1fr;gap:4rem;align-items:start;}
+  .legal-toc{position:sticky;top:calc(var(--nav-h) + 24px);}
+  .toc-label{font-size:0.72rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);font-weight:600;margin-bottom:1rem;}
+  .toc-list{list-style:none;display:flex;flex-direction:column;gap:0.25rem;}
+  .toc-list a{text-decoration:none;color:var(--muted);font-size:0.85rem;line-height:1.5;padding:0.35rem 0.75rem;border-radius:8px;transition:all 0.2s;display:block;border-left:2px solid transparent;}
+  .toc-list a:hover{color:var(--accent2);background:rgba(91,63,212,0.05);border-left-color:var(--accent2);}
+  .toc-list a.active{color:var(--accent2);background:rgba(91,63,212,0.06);border-left-color:var(--accent2);font-weight:500;}
+
+  .legal-article{padding-top:4px;}
+  .legal-section{margin-bottom:3rem;padding-bottom:3rem;border-bottom:1px solid var(--border);}
+  .legal-section:last-child{border-bottom:none;margin-bottom:0;}
+  .legal-section h2{font-family:'Fraunces',serif;font-weight:800;font-size:1.5rem;letter-spacing:-0.5px;margin-bottom:1rem;color:var(--text);display:flex;align-items:center;gap:0.75rem;}
+  .section-num{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;background:rgba(91,63,212,0.1);border-radius:8px;font-size:0.8rem;font-weight:700;color:var(--accent2);font-family:'Manrope',sans-serif;flex-shrink:0;}
+  .legal-section h3{font-family:'Fraunces',serif;font-weight:700;font-size:1.05rem;margin:1.5rem 0 0.6rem;color:var(--text);}
+  .legal-section p{color:var(--muted);font-size:0.925rem;line-height:1.8;margin-bottom:0.9rem;font-weight:300;}
+  .legal-section p:last-child{margin-bottom:0;}
+  .legal-section ul{list-style:none;margin:0.75rem 0 1rem;display:flex;flex-direction:column;gap:0.5rem;}
+  .legal-section ul li{display:flex;align-items:flex-start;gap:0.75rem;color:var(--muted);font-size:0.925rem;line-height:1.7;font-weight:300;}
+  .legal-section ul li::before{content:'';display:block;width:6px;height:6px;min-width:6px;border-radius:50%;background:var(--accent2);margin-top:0.55rem;}
+  .highlight-box{background:rgba(91,63,212,0.04);border:1px solid rgba(91,63,212,0.15);border-radius:12px;padding:1.25rem 1.5rem;margin:1.25rem 0;}
+  .highlight-box p{color:var(--text);font-size:0.9rem;margin:0;}
+  .warn-box{background:rgba(200,154,16,0.05);border:1px solid rgba(200,154,16,0.2);border-radius:12px;padding:1.25rem 1.5rem;margin:1.25rem 0;}
+  .warn-box p{color:var(--text);font-size:0.9rem;margin:0;}
+
+  footer{background:var(--text);color:rgba(255,255,255,0.9);padding:0;}
+  .footer-top{padding:4rem 5% 3rem;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:3rem;border-bottom:1px solid rgba(255,255,255,0.08);}
+  .footer-brand .logo{color:#fff;margin-bottom:1rem;display:inline-flex;}
+  .footer-brand .logo span{color:var(--accent);}
+  .footer-brand p{font-size:0.875rem;color:rgba(255,255,255,0.5);line-height:1.7;font-weight:300;max-width:260px;}
+  .footer-social{display:flex;gap:0.75rem;margin-top:1.5rem;}
+  .social-icon{width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.6);text-decoration:none;transition:all 0.2s;}
+  .social-icon:hover{background:var(--accent);border-color:var(--accent);color:#fff;}
+  .footer-col h5{font-family:'Fraunces',serif;font-weight:700;font-size:0.9rem;margin-bottom:1.25rem;color:#fff;}
+  .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:0.65rem;}
+  .footer-col ul li a{text-decoration:none;color:rgba(255,255,255,0.5);font-size:0.875rem;transition:color 0.2s;}
+  .footer-col ul li a:hover{color:rgba(255,255,255,0.9);}
+  .footer-bottom{padding:1.5rem 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+  .footer-bottom p{font-size:0.8rem;color:rgba(255,255,255,0.35);}
+  .footer-bottom-links{display:flex;gap:1.5rem;}
+  .footer-bottom-links a{text-decoration:none;color:rgba(255,255,255,0.35);font-size:0.8rem;transition:color 0.2s;}
+  .footer-bottom-links a:hover{color:rgba(255,255,255,0.7);}
+
+  @media(max-width:1024px){.footer-top{grid-template-columns:1fr 1fr;gap:2.5rem;}.footer-brand{grid-column:span 2;}}
+  @media(max-width:768px){.nav-links,.nav-cta{display:none;}.hamburger{display:flex;}.legal-layout{grid-template-columns:1fr;gap:2rem;}.legal-toc{display:none;}.legal-hero{padding:calc(var(--nav-h) + 30px) 5% 30px;}}
+  @media(max-width:640px){.footer-top{grid-template-columns:1fr;}.footer-brand{grid-column:span 1;}.footer-bottom{flex-direction:column;text-align:center;}.legal-meta{gap:1rem;}}
+</style>
+</head>
+<body>
+
+<nav id="navbar">
+  <a href="index.html" class="logo">
+    <img src="favicon.png" alt="Cloudysol" onerror="this.style.display='none'">
+    Cloudy<span>sol</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#products">Products</a></li>
+    <li><a href="index.html#custom">Custom Software</a></li>
+    <li><a href="index.html#process">Our Process</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="nav-cta">
+    <a href="contact.html" class="btn-demo">Get A Demo
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </a>
+  </div>
+  <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html#products">Products</a>
+  <a href="index.html#custom">Custom Software</a>
+  <a href="index.html#process">Our Process</a>
+  <a href="contact.html">Contact</a>
+  <div class="mobile-cta"><a href="contact.html" class="btn-primary-full">Get A Demo</a></div>
+</div>
+
+<div class="legal-hero">
+  <div class="hero-inner">
+    <div class="legal-badge">📋 Legal Document</div>
+    <h1>Terms of Service</h1>
+    <p>Please read these terms carefully before using Cloudysol's website or services. By accessing our services, you agree to be bound by these terms and conditions.</p>
+    <div class="legal-meta">
+      <div class="meta-item"><strong>Effective Date:</strong>&nbsp;January 1, 2026</div>
+      <div class="meta-item"><strong>Last Updated:</strong>&nbsp;January 1, 2026</div>
+      <div class="meta-item"><strong>Jurisdiction:</strong>&nbsp;Pakistan</div>
+    </div>
+  </div>
+</div>
+
+<div class="legal-layout">
+  <aside class="legal-toc">
+    <div class="toc-label">Contents</div>
+    <ul class="toc-list">
+      <li><a href="#t1">Acceptance of Terms</a></li>
+      <li><a href="#t2">Our Services</a></li>
+      <li><a href="#t3">Client Obligations</a></li>
+      <li><a href="#t4">Payment Terms</a></li>
+      <li><a href="#t5">Intellectual Property</a></li>
+      <li><a href="#t6">Confidentiality</a></li>
+      <li><a href="#t7">Limitation of Liability</a></li>
+      <li><a href="#t8">Warranties</a></li>
+      <li><a href="#t9">Project Delivery</a></li>
+      <li><a href="#t10">Termination</a></li>
+      <li><a href="#t11">Dispute Resolution</a></li>
+      <li><a href="#t12">Governing Law</a></li>
+      <li><a href="#t13">Contact Us</a></li>
+    </ul>
+  </aside>
+
+  <article class="legal-article">
+
+    <div class="legal-section" id="t1">
+      <h2><span class="section-num">1</span>Acceptance of Terms</h2>
+      <p>By accessing or using Cloudysol's website, requesting a demo, or engaging our services, you confirm that you have read, understood, and agree to be bound by these Terms of Service.</p>
+      <p>If you are entering into this agreement on behalf of a company or organization, you represent that you have the authority to bind that entity to these terms.</p>
+      <div class="highlight-box">
+        <p>If you do not agree with any part of these terms, please do not use our services. Continued use of our website or services constitutes acceptance of any updates to these terms.</p>
+      </div>
+    </div>
+
+    <div class="legal-section" id="t2">
+      <h2><span class="section-num">2</span>Our Services</h2>
+      <p>Cloudysol provides custom software development and technology solutions, including but not limited to:</p>
+      <ul>
+        <li>Inventory management systems and related software</li>
+        <li>Accounting and finance software solutions</li>
+        <li>Point-of-sale (POS) systems for retail and restaurant businesses</li>
+        <li>HR and payroll management systems</li>
+        <li>Custom software development tailored to client specifications</li>
+        <li>Software consultation, support, and maintenance services</li>
+      </ul>
+      <p>We reserve the right to modify, suspend, or discontinue any service at any time with reasonable notice to affected clients.</p>
+    </div>
+
+    <div class="legal-section" id="t3">
+      <h2><span class="section-num">3</span>Client Obligations</h2>
+      <p>To ensure successful project delivery, clients agree to:</p>
+      <ul>
+        <li>Provide accurate, complete, and timely information required for project execution</li>
+        <li>Designate a primary point of contact with authority to make project decisions</li>
+        <li>Review and provide feedback on deliverables within agreed timeframes</li>
+        <li>Make payments according to the agreed schedule and terms</li>
+        <li>Not use our services for any unlawful, harmful, or fraudulent purposes</li>
+        <li>Maintain the confidentiality of any access credentials provided by Cloudysol</li>
+        <li>Notify us promptly of any issues, bugs, or concerns with delivered software</li>
+      </ul>
+      <p>Delays caused by client failure to meet these obligations may result in adjusted project timelines and additional charges.</p>
+    </div>
+
+    <div class="legal-section" id="t4">
+      <h2><span class="section-num">4</span>Payment Terms</h2>
+      <p>All fees and payment schedules will be outlined in your individual project proposal or service agreement. The following general terms apply:</p>
+      <h3>Payment Schedule</h3>
+      <ul>
+        <li>An initial deposit (typically 30–50%) is required before project work commences</li>
+        <li>Milestone-based payments are due upon completion and approval of each phase</li>
+        <li>Final payment is due before delivery of final source code or deployment</li>
+      </ul>
+      <h3>Late Payments</h3>
+      <ul>
+        <li>Payments overdue by more than 14 days may result in work suspension</li>
+        <li>A late fee of 2% per month may be applied to outstanding balances</li>
+        <li>Cloudysol reserves the right to withhold deliverables until payment is received</li>
+      </ul>
+      <div class="warn-box">
+        <p>All prices are quoted in Pakistani Rupees (PKR) unless otherwise specified in writing. Quoted prices are valid for 30 days from the date of proposal.</p>
+      </div>
+    </div>
+
+    <div class="legal-section" id="t5">
+      <h2><span class="section-num">5</span>Intellectual Property</h2>
+      <h3>Client-Owned Work</h3>
+      <p>Upon receipt of full payment, clients receive full ownership of all custom-developed code, designs, and deliverables created specifically for their project. This includes source code, documentation, and related assets.</p>
+      <h3>Cloudysol-Retained Rights</h3>
+      <ul>
+        <li>Pre-existing tools, frameworks, libraries, and methodologies developed by Cloudysol remain our property</li>
+        <li>We retain the right to use general knowledge, skills, and techniques acquired during your project</li>
+        <li>Third-party software, libraries, or components are subject to their own respective licenses</li>
+      </ul>
+      <h3>Portfolio Rights</h3>
+      <p>Unless otherwise agreed in writing, Cloudysol reserves the right to reference your project in our portfolio and marketing materials without disclosing confidential details.</p>
+    </div>
+
+    <div class="legal-section" id="t6">
+      <h2><span class="section-num">6</span>Confidentiality</h2>
+      <p>Both parties agree to maintain strict confidentiality regarding sensitive information shared during the course of the project relationship.</p>
+      <ul>
+        <li>All business information, processes, and data shared by clients will be kept strictly confidential</li>
+        <li>Our team members are bound by confidentiality obligations</li>
+        <li>We will not disclose your project details, business operations, or data to unauthorized third parties</li>
+        <li>Confidentiality obligations survive the termination of the service agreement</li>
+      </ul>
+      <p>Clients may request a formal Non-Disclosure Agreement (NDA) before project discussions begin. We are happy to accommodate this request.</p>
+    </div>
+
+    <div class="legal-section" id="t7">
+      <h2><span class="section-num">7</span>Limitation of Liability</h2>
+      <p>To the maximum extent permitted by applicable law, Cloudysol's total liability for any claims arising from our services shall not exceed the total amount paid by the client for the specific service giving rise to the claim in the three months prior to the event.</p>
+      <p>Cloudysol shall not be liable for:</p>
+      <ul>
+        <li>Indirect, incidental, or consequential damages</li>
+        <li>Loss of profits, revenue, data, or business opportunities</li>
+        <li>Damages resulting from client misuse of delivered software</li>
+        <li>Issues arising from third-party services, APIs, or integrations outside our control</li>
+        <li>Force majeure events including natural disasters, power outages, or government actions</li>
+      </ul>
+    </div>
+
+    <div class="legal-section" id="t8">
+      <h2><span class="section-num">8</span>Warranties &amp; Disclaimers</h2>
+      <p>Cloudysol warrants that all services will be performed in a professional manner consistent with industry standards. We provide the following limited warranties on delivered software:</p>
+      <ul>
+        <li>A 30-day bug fix warranty after final delivery for issues directly caused by our code</li>
+        <li>Software will perform as specified in the agreed project scope</li>
+        <li>We will use reasonable skill and care in delivering all services</li>
+      </ul>
+      <div class="warn-box">
+        <p>Except as expressly stated, services are provided "as is" without additional warranties. We do not guarantee uninterrupted, error-free operation of software in all environments or under all conditions.</p>
+      </div>
+    </div>
+
+    <div class="legal-section" id="t9">
+      <h2><span class="section-num">9</span>Project Delivery &amp; Revisions</h2>
+      <p>Project timelines, deliverables, and revision rounds will be clearly defined in your individual project agreement. General terms:</p>
+      <ul>
+        <li>Delivery dates are estimates based on agreed scope; changes in scope may affect timelines</li>
+        <li>Each project phase includes a defined number of revision rounds as specified in the proposal</li>
+        <li>Revisions beyond the agreed scope will be quoted and billed separately</li>
+        <li>Client approval at each milestone is required before proceeding to the next phase</li>
+        <li>Delays due to client non-responsiveness may result in revised delivery schedules</li>
+      </ul>
+    </div>
+
+    <div class="legal-section" id="t10">
+      <h2><span class="section-num">10</span>Termination</h2>
+      <h3>Termination by Client</h3>
+      <p>Clients may terminate a project with 14 days' written notice. Upon termination, the client is responsible for payment of all work completed up to the termination date. The initial deposit is non-refundable.</p>
+      <h3>Termination by Cloudysol</h3>
+      <p>We may terminate or suspend services with written notice if:</p>
+      <ul>
+        <li>Payment obligations are not met within the agreed timeframe</li>
+        <li>The client engages in illegal, abusive, or unethical conduct</li>
+        <li>Continuing the project would require us to violate applicable law</li>
+      </ul>
+      <h3>Effect of Termination</h3>
+      <p>Upon termination, Cloudysol will deliver all completed work. Access to any hosted services or shared resources will be revoked within a reasonable period.</p>
+    </div>
+
+    <div class="legal-section" id="t11">
+      <h2><span class="section-num">11</span>Dispute Resolution</h2>
+      <p>In the event of a dispute, both parties agree to attempt resolution through the following process:</p>
+      <ul>
+        <li><strong style="color:var(--text)">Step 1 — Direct Discussion:</strong> The parties will attempt to resolve the issue through good-faith discussion within 15 days of the dispute arising</li>
+        <li><strong style="color:var(--text)">Step 2 — Mediation:</strong> If direct discussion fails, both parties agree to engage a mutually agreed mediator before pursuing legal action</li>
+        <li><strong style="color:var(--text)">Step 3 — Legal Action:</strong> If mediation is unsuccessful, disputes will be resolved in courts of competent jurisdiction in Pakistan</li>
+      </ul>
+    </div>
+
+    <div class="legal-section" id="t12">
+      <h2><span class="section-num">12</span>Governing Law</h2>
+      <p>These Terms of Service shall be governed by and construed in accordance with the laws of the Islamic Republic of Pakistan. Any legal proceedings shall be subject to the exclusive jurisdiction of the courts of Pakistan.</p>
+      <p>For international clients, these terms remain governed by Pakistani law unless a separate written agreement specifies otherwise.</p>
+    </div>
+
+    <div class="legal-section" id="t13">
+      <h2><span class="section-num">13</span>Contact Us</h2>
+      <p>If you have any questions about these Terms of Service, or wish to discuss a specific clause before engaging our services, please reach out:</p>
+      <div class="highlight-box">
+        <p><strong>Cloudysol</strong><br>Email: <a href="mailto:thecloudysol@outlook.com" style="color:var(--accent2)">thecloudysol@outlook.com</a><br>Phone: <a href="tel:+923042833811" style="color:var(--accent2)">+92 304 2833811</a><br>Pakistan</p>
+      </div>
+      <p>We believe in transparency and are happy to clarify any aspect of these terms before you commit to working with us.</p>
+    </div>
+
+  </article>
+</div>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">Cloudy<span>sol</span></a>
+      <p>We engineer powerful, tailor-made software solutions that fit your business operations.</p>
+      <div class="footer-social">
+        <a href="#" class="social-icon"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+        <a href="mailto:thecloudysol@outlook.com" class="social-icon"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-col"><h5>Products</h5><ul><li><a href="index.html#products">Inventory System</a></li><li><a href="index.html#products">Accounts Software</a></li><li><a href="index.html#products">POS Systems</a></li><li><a href="index.html#products">HR & Payroll</a></li></ul></div>
+    <div class="footer-col"><h5>Company</h5><ul><li><a href="index.html#custom">Custom Software</a></li><li><a href="index.html#process">Our Process</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
+    <div class="footer-col"><h5>Legal</h5><ul><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms of Service</a></li></ul><h5 style="margin-top:1.5rem;">Contact</h5><ul><li><a href="mailto:thecloudysol@outlook.com">thecloudysol@outlook.com</a></li><li><a href="tel:+923042833811">+92 304 2833811</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Cloudysol. All rights reserved.</p>
+    <div class="footer-bottom-links"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a><a href="contact.html">Contact</a></div>
+  </div>
+</footer>
+
+<script>
+  const hamburger=document.getElementById('hamburger'),mobileMenu=document.getElementById('mobileMenu');
+  hamburger.addEventListener('click',()=>{hamburger.classList.toggle('open');mobileMenu.classList.toggle('open');document.body.style.overflow=mobileMenu.classList.contains('open')?'hidden':'';});
+  window.addEventListener('scroll',()=>{document.getElementById('navbar').style.boxShadow=window.scrollY>20?'0 4px 20px rgba(0,0,0,0.08)':'none';});
+  const tocLinks=document.querySelectorAll('.toc-list a');
+  const legalSections=document.querySelectorAll('.legal-section');
+  window.addEventListener('scroll',()=>{
+    let current='';
+    legalSections.forEach(s=>{if(window.scrollY>=s.offsetTop-120)current=s.id;});
+    tocLinks.forEach(l=>{l.classList.remove('active');if(l.getAttribute('href')==='#'+current)l.classList.add('active');});
+  });
+</script>
+</body>
+</html>
